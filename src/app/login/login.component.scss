@@ -1,0 +1,120 @@
+
+
+  .container{
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    background-color: rgba(70, 142, 70, 0.714);
+    padding: 3.125em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+  }
+  
+  .signup {
+    color: rgb(9, 9, 9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 0.5em;
+    margin-bottom: 30px;
+  }
+  
+  .form--input {
+    width: 100%;
+    margin-bottom: 1.25em;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.8em;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+  
+  .form--input:focus {
+    border: 1px solid #639;
+    outline: none;
+  }
+  
+  .form--marketing {
+    display: flex;
+    margin-bottom: 1.25em;
+    align-items: center;
+  }
+  
+  .form--marketing > input {
+    margin-right: 0.625em;
+  }
+  
+  .form--marketing > label {
+    color: grey;
+  }
+  
+  .checkbox, input[type="checkbox"] {
+    accent-color: #639;
+  }
+  
+  .form--submit {
+    width: 50%;
+    padding: 0.625em;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1px dashed rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .form--submit:hover {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1px dashed rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .buttons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 310px; /* Adjust the max-width to center align the buttons */
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 12.5px 30px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #02781c;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  .btn:hover {
+    background-color: rgba(70, 142, 70, 0.714);
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+  }
+  
+  .btn:active {
+    background-color: rgba(70, 142, 70, 0.714);
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+  }

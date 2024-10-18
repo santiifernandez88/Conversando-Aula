@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="chat-card" >
+    <div class="chat-header" (click)="toggleChat()">
+      <ion-button slot="start" class="btn-back" color="black" (click)="back()"> 
+        <ion-icon  slot="start" name="arrow-back-circle-outline" class="large-icon"></ion-icon>
+      </ion-button>
+     <div class="h2">PPS-4B</div>
+    </div>
+    <div class="chat-body" #chatBody>
+      <span *ngFor="let item of mensajesBD">
+        @if (auth.getUserEmail() !== item.emisor) {
+          <div class="message incoming">
+            <p class="emisor">{{item.emisor}} <br>{{item.fecha}}</p>
+            <p class="mensajeEntrante"><br>{{item.texto}}</p>
+          </div>
+        } @else {
+          <div class="message outgoing" *ngIf="auth.getUserEmail() === item.emisor">
+            <p class="fecha">{{item.fecha}}</p>
+            <p class="mensaje">{{item.texto}}</p>
+          </div>
+        }
+      </span>
+    </div> 
+    <div class="chat-footer">
+      <input placeholder="Type your message" type="text" [(ngModel)]="mensajeNuevo">
+      <button (click)="EnviarMensaje()">Enviar</button>
+    </div>
+  </div>
+  
+
+</ion-content>
+

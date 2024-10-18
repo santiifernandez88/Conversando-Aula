@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="buttons-container">
+    <button class="btn" (click)="Rellenar('admin@admin.com','111111')">Admin</button>
+    <button class="btn" (click)="Rellenar('usuario@usuario.com','333333')">Usuario</button>
+    <button class="btn" (click)="Rellenar('tester@tester.com', '555555')">Tester</button>
+    <button class="btn" (click)="Rellenar('anonimo@anonimo.com', '444444')">Anonimo</button>
+    <button class="btn" (click)="Rellenar('invitado@invitado.com','222222')">Invitado</button>
+  </div>
+  <div class="form">
+    <span class="signup">Bienvenido</span>
+    <div>
+      <label for="email">Correo Electronico</label>
+      <input type="email" placeholder="Ingrese un correo electronico" class="form--input" [(ngModel)]="email">
+    </div>
+    <div>
+      <label for="password">Contraseña</label>
+      <input type="password" placeholder="Ingrese su contraseña" class="form--input" [(ngModel)]="password">
+    </div>
+    
+    <button class="form--submit" (click)="LoginUser()">
+        Iniciar Sesión
+    </button>
+    @if(flagError){
+      <p class="text-center text-danger">{{msjError}}</p>
+    } 
+  </div>
+  
+</div>
+
